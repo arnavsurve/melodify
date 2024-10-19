@@ -65,45 +65,40 @@ def parse_text_to_midi(text_data, output_midi_file):
 # Example usage
 text_data = """Tempo: 80.00 BPM
 Ticks per beat: 15360
-Note_on - Note: 0, Velocity: 0, Time (ticks): 0
-Note_on - Note: A4 (MIDI 69), Velocity: 110, Time (ticks): 3840
-Note_off - Note: A4 (MIDI 69), Velocity: 0, Time (ticks): 7680
-Note_on - Note: E5 (MIDI 76), Velocity: 110, Time (ticks): 11520
-Note_off - Note: E5 (MIDI 76), Velocity: 0, Time (ticks): 15360
-Note_on - Note: C5 (MIDI 72), Velocity: 110, Time (ticks): 19200
-Note_off - Note: C5 (MIDI 72), Velocity: 0, Time (ticks): 23040
-Note_on - Note: A4 (MIDI 69), Velocity: 110, Time (ticks): 26880
-Note_off - Note: A4 (MIDI 69), Velocity: 0, Time (ticks): 30720
-Note_on - Note: F4 (MIDI 65), Velocity: 110, Time (ticks): 34560
-Note_off - Note: F4 (MIDI 65), Velocity: 0, Time (ticks): 38400
-Note_on - Note: D4 (MIDI 62), Velocity: 110, Time (ticks): 42240
-Note_off - Note: D4 (MIDI 62), Velocity: 0, Time (ticks): 46080
-Note_on - Note: C4 (MIDI 60), Velocity: 110, Time (ticks): 49920
-Note_off - Note: C4 (MIDI 60), Velocity: 0, Time (ticks): 53760
-Note_on - Note: A3 (MIDI 57), Velocity: 110, Time (ticks): 57600
-Note_off - Note: A3 (MIDI 57), Velocity: 0, Time (ticks): 61440
-Note_on - Note: C4 (MIDI 60), Velocity: 110, Time (ticks): 65280
-Note_off - Note: C4 (MIDI 60), Velocity: 0, Time (ticks): 69120
-Note_on - Note: 0, Velocity: 0, Time (ticks): 72960
-Note_on - Note: A4 (MIDI 69), Velocity: 110, Time (ticks): 76800
-Note_off - Note: A4 (MIDI 69), Velocity: 0, Time (ticks): 80640
-Note_on - Note: E5 (MIDI 76), Velocity: 110, Time (ticks): 84480
-Note_off - Note: E5 (MIDI 76), Velocity: 0, Time (ticks): 88320
-Note_on - Note: C5 (MIDI 72), Velocity: 110, Time (ticks): 92160
-Note_off - Note: C5 (MIDI 72), Velocity: 0, Time (ticks): 96000
-Note_on - Note: A4 (MIDI 69), Velocity: 110, Time (ticks): 99840
-Note_off - Note: A4 (MIDI 69), Velocity: 0, Time (ticks): 103680
-Note_on - Note: F4 (MIDI 65), Velocity: 110, Time (ticks): 107520
-Note_off - Note: F4 (MIDI 65), Velocity: 0, Time (ticks): 111360
-Note_on - Note: D4 (MIDI 62), Velocity: 110, Time (ticks): 115200
-Note_off - Note: D4 (MIDI 62), Velocity: 0, Time (ticks): 119040
-Note_on - Note: C4 (MIDI 60), Velocity: 110, Time (ticks): 122880
-Note_off - Note: C4 (MIDI 60), Velocity: 0, Time (ticks): 126720
-Note_on - Note: A3 (MIDI 57), Velocity: 110, Time (ticks): 130560
-Note_off - Note: A3 (MIDI 57), Velocity: 0, Time (ticks): 134400
-Note_on - Note: C4 (MIDI 60), Velocity: 110, Time (ticks): 138240
-Note_off - Note: C4 (MIDI 60), Velocity: 0, Time (ticks): 142080
-Note_on - Note: 0, Velocity: 0, Time (ticks): 145920
+Note_on - Note: C5 (MIDI 72), Velocity: 110, Time (ticks): 0
+Note_off - Note: C5 (MIDI 72), Velocity: 0, Time (ticks): 3840
+Note_on - Note: D5 (MIDI 74), Velocity: 112, Time (ticks): 3840
+Note_off - Note: D5 (MIDI 74), Velocity: 0, Time (ticks): 7680
+Note_on - Note: E5 (MIDI 76), Velocity: 114, Time (ticks): 7680
+Note_off - Note: E5 (MIDI 76), Velocity: 0, Time (ticks): 11520
+Note_on - Note: F5 (MIDI 77), Velocity: 116, Time (ticks): 11520
+Note_off - Note: F5 (MIDI 77), Velocity: 0, Time (ticks): 15360
+Note_on - Note: G5 (MIDI 79), Velocity: 118, Time (ticks): 15360
+Note_off - Note: G5 (MIDI 79), Velocity: 0, Time (ticks): 19200
+Note_on - Note: A5 (MIDI 81), Velocity: 120, Time (ticks): 19200
+Note_off - Note: A5 (MIDI 81), Velocity: 0, Time (ticks): 23040
+Note_on - Note: G5 (MIDI 79), Velocity: 118, Time (ticks): 23040
+Note_off - Note: G5 (MIDI 79), Velocity: 0, Time (ticks): 26880
+Note_on - Note: F5 (MIDI 77), Velocity: 116, Time (ticks): 26880
+Note_off - Note: F5 (MIDI 77), Velocity: 0, Time (ticks): 30720
+Note_on - Note: E5 (MIDI 76), Velocity: 114, Time (ticks): 30720
+Note_off - Note: E5 (MIDI 76), Velocity: 0, Time (ticks): 34560
+Note_on - Note: D5 (MIDI 74), Velocity: 112, Time (ticks): 34560
+Note_off - Note: D5 (MIDI 74), Velocity: 0, Time (ticks): 38400
+Note_on - Note: C5 (MIDI 72), Velocity: 110, Time (ticks): 38400
+Note_off - Note: C5 (MIDI 72), Velocity: 0, Time (ticks): 42240
+Note_on - Note: B4 (MIDI 71), Velocity: 108, Time (ticks): 42240
+Note_off - Note: B4 (MIDI 71), Velocity: 0, Time (ticks): 46080
+Note_on - Note: A4 (MIDI 69), Velocity: 106, Time (ticks): 46080
+Note_off - Note: A4 (MIDI 69), Velocity: 0, Time (ticks): 57600
+Note_on - Note: G4 (MIDI 67), Velocity: 104, Time (ticks): 57600
+Note_off - Note: G4 (MIDI 67), Velocity: 0, Time (ticks): 61440
+Note_on - Note: A4 (MIDI 69), Velocity: 106, Time (ticks): 61440
+Note_off - Note: A4 (MIDI 69), Velocity: 0, Time (ticks): 65280
+Note_on - Note: B4 (MIDI 71), Velocity: 108, Time (ticks): 65280
+Note_off - Note: B4 (MIDI 71), Velocity: 0, Time (ticks): 69120
+Note_on - Note: C5 (MIDI 72), Velocity: 110, Time (ticks): 69120
+Note_off - Note: C5 (MIDI 72), Velocity: 0, Time (ticks): 76800
 """
 # The full text data would be here
 

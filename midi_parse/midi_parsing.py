@@ -45,7 +45,7 @@ def parse_midi_with_mido(midi_file_path):
 
 
 # Usage
-midi_file_path = "/Users/syrusaslam1/code_projects/backend/midi_parse/midi_data/Melodies/blah_blah.mid"
+midi_file_path = "/Users/syrusaslam1/code_projects/backend/midi_parse/midi_data/Chords/bruhbruhbruh.mid"
 midi_text = parse_midi_with_mido(midi_file_path)
 
 # Save to a file or print

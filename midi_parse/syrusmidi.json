@@ -1,0 +1,125 @@
+{
+  "notes": [
+    {
+      "note_id": 81,
+      "pitch": 65,
+      "start_time": 56,
+      "duration": 0.9906900391275392,
+      "velocity": 111,
+      "mute": 0,
+      "probability": 1,
+      "velocity_deviation": 0,
+      "release_velocity": 0
+    },
+    {
+      "note_id": 30,
+      "pitch": 67,
+      "start_time": 20,
+      "duration": 1.0176432942057942,
+      "velocity": 116,
+      "mute": 0,
+      "probability": 1,
+      "velocity_deviation": 0,
+      "release_velocity": 0
+    },
+    {
+      "note_id": 42,
+      "pitch": 67,
+      "start_time": 28,
+      "duration": 0.9274740884115884,
+      "velocity": 112,
+      "mute": 0,
+      "probability": 1,
+      "velocity_deviation": 0,
+      "release_velocity": 0
+    },
+    {
+      "note_id": 77,
+      "pitch": 67,
+      "start_time": 52,
+      "duration": 1.3299479166666666,
+      "velocity": 115,
+      "mute": 0,
+      "probability": 1,
+      "velocity_deviation": 0,
+      "release_velocity": 0
+    },
+    {
+      "note_id": 80,
+      "pitch": 67,
+      "start_time": 55,
+      "duration": 0.5302733724608725,
+      "velocity": 99,
+      "mute": 0,
+      "probability": 1,
+      "velocity_deviation": 0,
+      "release_velocity": 0
+    },
+    {
+      "note_id": 82,
+      "pitch": 67,
+      "start_time": 57,
+      "duration": 0.96640625,
+      "velocity": 104,
+      "mute": 0,
+      "probability": 1,
+      "velocity_deviation": 0,
+      "release_velocity": 0
+    },
+    {
+      "note_id": 4,
+      "pitch": 69,
+      "start_time": 1,
+      "duration": 0.6466796224608725,
+      "velocity": 107,
+      "mute": 0,
+      "probability": 1,
+      "velocity_deviation": 0,
+      "release_velocity": 0
+    },
+    {
+      "note_id": 8,
+      "pitch": 69,
+      "start_time": 3,
+      "duration": 0.7235678384115884,
+      "velocity": 108,
+      "mute": 0,
+      "probability": 1,
+      "velocity_deviation": 0,
+      "release_velocity": 0
+    },
+    {
+      "note_id": 15,
+      "pitch": 69,
+      "start_time": 9,
+      "duration": 0.53828125,
+      "velocity": 105,
+      "mute": 0,
+      "probability": 1,
+      "velocity_deviation": 0,
+      "release_velocity": 0
+    },
+    {
+      "note_id": 19,
+      "pitch": 69,
+      "start_time": 11,
+      "duration": 0.7355470050782551,
+      "velocity": 106,
+      "mute": 0,
+      "probability": 1,
+      "velocity_deviation": 0,
+      "release_velocity": 0
+    },
+    {
+      "note_id": 25,
+      "pitch": 69,
+      "start_time": 17,
+      "duration": 0.7147787108724609,
+      "velocity": 110,
+      "mute": 0,
+      "probability": 1,
+      "velocity_deviation": 0,
+      "release_velocity": 0
+    }
+  ]
+}
