@@ -1,7 +1,7 @@
 function sendMIDI(midi) {
   var jsonData = JSON.stringify(midiNotes);
 
-  var url = "http://127.0.0.1:9999/midi"; // Replace <server_ip> with your server's IP
+  var url = "http://127.0.0.1:9999/midi";
   var httpRequest = new XMLHttpRequest();
   httpRequest.open("POST", url, true);
   httpRequest.setRequestHeader("Content-Type", "application/json");
