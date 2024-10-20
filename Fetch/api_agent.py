@@ -5,7 +5,7 @@ import mido
 
 # Define the models to structure communication
 class MidiData(Model):
-    midi_json: str  # MIDI data in JSON format
+    midi_file: str 
 
 class GeneratedMidi(Model):
     generated_midi_json: str  # Generated MIDI data in JSON format
@@ -25,18 +25,20 @@ api_agent = Agent(
 app = Flask(__name__)
 
 # Handle incoming JSON from Ableton's plugin and forward it to the AI Model User Agent
-@app.route("/ableton-midi", methods=["POST"])
+@app.route("/submit", methods=["POST"])
 def receive_midi_data():
+    assert request.method == ["POST"]
     try:
         # Step 1: Receive the MIDI data as JSON
-        midi_json = request.json
+        data = request.get_json()
+        notes = data.get('notes')
 
         # Step 2: Convert the JSON to MIDI (if necessary) or just send the raw data
         midi_file_path = "/tmp/input_midi.mid"
-        convert_json_to_midi(midi_json, midi_file_path)  # Convert JSON to MIDI file
+        convert_json_to_midi(notes, midi_file_path)  # Convert JSON to MIDI file
 
         # Step 3: Send the MIDI data to the AI Model User Agent
-        midi_message = MidiData(midi_json=json.dumps(midi_json))
+        midi_message = MidiData(midi_file_path)
         api_agent.send(API_AGENT_ADDRESS, midi_message)  # Send the message to the AI Model User Agent
 
         # Acknowledge request success
@@ -64,9 +66,9 @@ async def handle_generated_midi(ctx: Context, sender: str, message: GeneratedMid
     # For now, just log the generated MIDI
     return jsonify({"message": "Generated MIDI processed"}), 200
 
-def convert_json_to_midi(json_file_path, output_midi_path):
-    with open(json_file_path, 'r') as json_file:
-        midi_data = json.load(json_file)
+def convert_json_to_midi(json_body, output_midi_path):
+    # do not handle json as a file but as a dictionary object
+    # unmarshal JSON into .mid file and write to output_midi_path
 
     # Create a new MIDI file and a track
     midi = mido.MidiFile()
@@ -77,7 +79,7 @@ def convert_json_to_midi(json_file_path, output_midi_path):
     current_time_in_ticks = 0  # Time tracker in ticks
 
     # Go through each note in the JSON and recreate the note_on and note_off messages
-    for note in midi_data['notes']:
+    for note in json_body['notes']:
         pitch = note['pitch']
         start_time_in_seconds = note['start_time']
         duration_in_seconds = note['duration']
