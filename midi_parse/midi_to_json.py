@@ -59,6 +59,8 @@ def midi_to_custom_json(midi_file_path, output_json_path):
 
     print(f"Converted MIDI to custom JSON and saved to {output_json_path}")
 
+    return output_json_path
+
 # Example usage
 midi_file = "midi_parse/midi_data/Sequences/ok.mid"
 output_json = "midi_parse/midi_to_json.json"
