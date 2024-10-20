@@ -1,6 +1,4 @@
-import os
-import requests
-import json
+import shutil
 from gradio_client import Client, handle_file
 
 # Step 1: Call /lambda_1
@@ -8,7 +6,8 @@ client = Client("skytnt/midi-composer")
 lambda_result = client.predict(api_name="/lambda_1")
 
 # Step 2: Call /run with your local MIDI file
-midi_file_path = "midi_parse/midi_data/Sequences/ok.mid"  # Replace with your actual MIDI file path
+# midi_file_path = "midi_parse/midi_data/Sequences/ok.mid"  # Replace with your actual MIDI file path
+midi_file_path = "./midi_parse/minecraft_type_melody.mid"  # Replace with your actual MIDI file path
 
 run_result = client.predict(
     model_name="generic pretrain model (tv2o-medium) by skytnt",
@@ -26,7 +25,7 @@ run_result = client.predict(
     remove_empty_channels=False,
     seed=0,
     seed_rand=True,
-    gen_events=512,
+    gen_events=256,
     temp=1,
     top_p=0.95,
     top_k=20,
@@ -45,16 +44,5 @@ selected_notes = finish_result[0]
 
 print(selected_notes)
 
-folder_path = 'backend/json_files'
-
-# Create the folder if it doesn't exist
-os.makedirs(folder_path, exist_ok=True)
-
-# Define the file path where you want to save the JSON file
-file_path = os.path.join(folder_path, 'selected_notes.json')
-
-# Save the selected notes as a JSON file
-with open(file_path, 'w') as json_file:
-    json.dump(selected_notes, json_file, indent=4)
-
-print(f'Saved finish_result[0] as a JSON file at: {file_path}')
+# copy from /private/var/folders/...
+shutil.copy(finish_result[0], "./midi_parse/generated/")
