@@ -16,7 +16,7 @@ AI_MODEL_AGENT_ADDRESS = "agent1qfhleus80ckt5s4krllm22aam39d23etyy2pm2aw6vl6yyye
 @ai_model_user_agent.on_event("startup")
 async def send_midi_request(ctx: Context):
     """Send a MIDI file to the AI Model Agent when the agent starts."""
-    midi_file_path = "/path/to/your/midi/file.mid"  # Change to your MIDI file path
+    midi_file_path = "midi_parse/midi_data/Melodies/bruhbruh.mid"  # Change to your MIDI file path
     ctx.logger.info(f"Sending MIDI file {midi_file_path} to AI Model Agent")
     
     await ctx.send(AI_MODEL_AGENT_ADDRESS, MidiRequest(midi_file_path=midi_file_path))
